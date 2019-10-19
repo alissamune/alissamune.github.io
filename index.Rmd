@@ -1,0 +1,14 @@
+---
+---
+
+<link rel="stylesheet" href="styles.css" type="text/css">
+
+<img src="profile.jpeg" style="width:25%; border:5px solid; margin-right: 20px" align="left">
+
+*I enjoy solving complicated puzzles, mainly using R language. I like finishing projects, but love developing them.*
+
+Currently, I live in São Paulo, SP, Brazil, and work as Data Scientist in a Digital Marketing Agency. My main attributions are maintaining our infrastructure and helping create and automate models that assist and optimise decision making in our Digital Performance teams on a daily basis. I also perform recurrent analysis in order to detect and provide solution for problems our clients might be having, trying to inovate as much as I can, of course!
+
+I'm specially enthusiastic of diversity in STEM fields. My true passion for Data Science started when I met amazing people in the first *R-Ladies SP* meetup, back in 2018. 
+
+If you would like to contact me, please do so [here](alissamunerato@gmail.com).
