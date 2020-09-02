@@ -3,11 +3,11 @@ output_dir: "."
 navbar:
   title: "alissa c. munerato"
   left:
-    - text: "Writing"
+    - text: "writing"
       href: writing.html
-    - text: "Speaking"
+    - text: "speaking"
       href: talks.html
-    - text: "Programming"
+    - text: "programming"
       href: scripts.html
   right:
     - icon: fa-envelope fa-lg
