@@ -1,14 +1,14 @@
 name: "Alissa Munerato"
 output_dir: "."
 navbar:
-  title: "Alissa Munerato"
+  title: "alissa c. munerato"
   left:
     - text: "Writing"
-      href: research.html
+      href: writing.html
     - text: "Speaking"
       href: talks.html
     - text: "Programming"
-      href: software.html
+      href: scripts.html
   right:
     - icon: fa-envelope fa-lg
       href: contact.html

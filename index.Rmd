@@ -6,16 +6,16 @@
 
 *I enjoy solving complicated puzzles.*
 
-<img src="work.png" style="width:9%; border:0 solid; margin-right: 40px" align="left"> **I currently work as Data Scientist in a Fintech - [Rebel](https://rebel.com.br/) - *March/2020 - now* **. I routinely develop Machine Learning projects, analyse customer data and give our B2C team insights on our data-driven business. Luckly, I have an amazing Analytics team that works really well alongside each other. Here I'm able to fulfill my goals of learning and performing projects from beginning to end.   
+<img src="work.png" style="width:9%; border:0 solid; margin-right: 20px" align="left"> **I currently work as Data Scientist in a Fintech - [Rebel](https://rebel.com.br/) - *March/2020 - now* **. I routinely develop Machine Learning projects, analyse customer data and give our B2C team insights on our data-driven business. Luckly, I have an amazing Analytics team that works really well alongside each other. Here I'm able to fulfill my goals of learning and performing projects from beginning to end.   
 
 
 .
 
-<img src="past-work.png" style="width:9%; border:0 solid; margin-right: 40px" align="left"> **I worked as Data Scientist in a Digital Marketing Agency - [Vitrio](https://www.vitrio.com.br/) - *January/2019 - March/2020* **. My main attributions were maintaining our infrastructure and helping create and automate models that assist and optimise decision making in our Digital Performance teams on a daily basis. I also performed recurrent analysis in order to detect and provide solution for problems our clients have had, trying to inovate as much as I can, of course!
+<img src="past-work.png" style="width:9%; border:0 solid; margin-right: 20px" align="left"> **I worked as Data Scientist in a Digital Marketing Agency - [Vitrio](https://www.vitrio.com.br/) - *January/2019 - March/2020* **. My main attributions were maintaining our infrastructure and helping create and automate models that assist and optimise decision making in our Digital Performance teams on a daily basis. I also performed recurrent analysis in order to detect and provide solution for problems our clients have had, trying to inovate as much as I can, of course!
 
 .
 
-<img src="past-work.png" style="width:9%; border:0 solid; margin-right: 40px" align="left"> **I used to work Teaching English to brazilian students in a Foreign Languages School - [Yázigi](https://www.yazigi.com.br) *January/2018 - January/2019* **. During my time there I taught kids as young as 5 years old to senior adults. These months were specially gratifying, not only because of my development as a public speaker, but also because I was able to focus on personal projects, such as *R-Ladies SP*.
+<img src="past-work.png" style="width:9%; border:0 solid; margin-right: 20px" align="left"> **I used to work Teaching English to brazilian students in a Foreign Languages School - [Yázigi](https://www.yazigi.com.br) *January/2018 - January/2019* **. During my time there I taught kids as young as 5 years old to senior adults. These months were specially gratifying, not only because of my development as a public speaker and contact with many audiences, but also because I was able to focus on personal projects, such as *UFABC DataLab* and *R-Ladies SP*.
 
 <img src="miscellanea.png" style="width:100%; border:0 solid " align="center">
 
