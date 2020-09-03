@@ -7,7 +7,7 @@
 $$*I*enjoy*solving*complicated*puzzles*$$
 
 
-<img src="work.png" style="width:9%; border:0 solid; margin-right: 20px" align="left"> **I currently work as Data Scientist in a Fintech - [Rebel](https://rebel.com.br/) - *March/2020 - now* **. I routinely develop Machine Learning projects, analyse customer data and give our B2C team insights on our data-driven business. Luckly, I have an amazing Analytics team that works really well alongside each other. Here I'm able to fulfill my goals of learning and performing projects from beginning to end.   
+<img src="work.png" style="width:9%; border:0 solid; margin-right: 20px" align="left"> **I currently work as Data Scientist in a Fintech company - [Rebel](https://rebel.com.br/) - *March/2020 - now* **. I routinely develop Machine Learning projects, analyse customer data and give our B2C team insights on our data-driven business. Luckily, I have an amazing Analytics team with members who work really well alongside each other. Over here I'm able to fulfill my goals of learning and performing projects from beginning to end, adding value to the business.   
 
 
 .
