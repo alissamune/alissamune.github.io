@@ -3,4 +3,6 @@
 
 <link rel="stylesheet" href="styles.css" type="text/css">
 
+blablablablabla
+
 <img src="talk.png" style="width:9%; border:0 solid; margin-right: 20px" align="left">

@@ -6,7 +6,7 @@ navbar:
     - text: "writing"
       href: writing.html
     - text: "speaking"
-      href: talks.html
+      href: talk.html
     - text: "programming"
       href: scripts.html
   right:
