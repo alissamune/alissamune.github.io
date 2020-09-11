@@ -1,0 +1,679 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+  <head>
+    <title>O Viés do Observador no Machine Learning</title>
+    <meta charset="utf-8" />
+    <meta name="author" content="Alissa Caresia Munerato" />
+    <meta name="date" content="2020-12-09" />
+    <link href="libs/remark-css-0.0.1/hygge.css" rel="stylesheet" />
+    <link href="libs/remark-css-0.0.1/default-fonts.css" rel="stylesheet" />
+    <script src="libs/kePrint-0.0.1/kePrint.js"></script>
+    <link href="libs/lightable-0.0.1/lightable.css" rel="stylesheet" />
+    <link rel="stylesheet" href="my-footer.css" type="text/css" />
+  </head>
+  <body>
+    <textarea id="source">
+class: center, middle, inverse, title-slide
+
+# O Viés do Observador no Machine Learning
+### Alissa Caresia Munerato
+### 12/09/2020
+
+---
+
+
+### Prazer!
+&lt;link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ropa Sans"&gt;
+&lt;span class="emphasized"&gt;&amp;nbsp;Sobre mim&amp;nbsp;&lt;/span&gt;
+
+- Alissa Caresia Munerato
+- 27 anos
+- Estudei Neurociência na UFABC
+- Atualmente curso Análise e Desenvolvimento de Sistemas na Impacta
+
+
+&lt;span class="emphasized"&gt;&amp;nbsp;Meu trabalho&amp;nbsp;&lt;/span&gt;
+
+- Marketing Digital
+- Perfil do Consumidor
+- Análises de Performance
+
+&lt;div class="my-footer"&gt;&lt;span&gt;alissamunerato@gmail.com    
+&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;
+&amp;emsp;&amp;emsp;&amp;emsp;12/09/2020&lt;/span&gt;&lt;/div&gt; 
+---
+
+# O que é viés?
+
+.pull-left[
+&lt;img src="https://i.pinimg.com/originals/93/d3/a5/93d3a533efdf1c80ba964d6fa89807c3.gif" style="display: block; margin: auto auto auto 0;" /&gt;
+]
+
+.pull-right[&lt;span class="emphasized"&gt;&amp;nbsp;O que não é um viés?&amp;nbsp;&lt;/span&gt;
+
+- A mente humana é repleta de estruturas criadas *socialmente*;
+
+- O conhecimento é passado e aprendido através de *comunicação*;
+
+- Tudo tem viés?]
+
+&lt;div class="my-footer"&gt;&lt;span&gt;alissamunerato@gmail.com    
+&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;
+&amp;emsp;&amp;emsp;&amp;emsp;12/09/2020&lt;/span&gt;&lt;/div&gt; 
+---
+# O Viés do Observador
+
+Viés é sinônimo de tendência, orientação. Observador é quem conduz a pesquisa ou parte dela. Ou seja, &lt;span class="emphasized"&gt;&amp;nbsp;é a inclinação do pesquisador em direção a uma determinada conclusão.&amp;nbsp;&lt;/span&gt;
+
+.pull-left[
+&lt;img src="devaiwomen_files/Jastrow-illusion-track.jpg" width="90%" style="display: block; margin: auto auto auto 0;" /&gt;
+&lt;img src="https://www.spiria.com/site/assets/files/2024/containers-486570435_0.-large.jpg" width="90%" style="display: block; margin: auto auto auto 0;" /&gt;
+
+]
+
+.pull-right[&lt;span class="emphasized"&gt;&amp;nbsp;Heurística&amp;nbsp;&lt;/span&gt;
+
+- É um "atalho" cognitivo de modo a exigir menos processamento de informação no nosso cérebro. Ex.: Perímetro menor próximo do maior.
+
+- Ela é muito útil na IA para conseguirmos soluções rápidas, com base em conhecimento prévio. Ex.: Como desenvolver algoritmo de organização de conteiners sem inputs prévios?
+
+]
+
+
+&lt;div class="my-footer"&gt;&lt;span&gt;alissamunerato@gmail.com    
+&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;
+&amp;emsp;&amp;emsp;&amp;emsp;12/09/2020&lt;/span&gt;&lt;/div&gt; 
+
+
+---
+
+# O Viés do Observador
+
+A heurística pode gerar viéses cognitivos. Na ciência isso se traduz no &lt;span class="emphasized"&gt;&amp;nbsp;Viés do Observador&amp;nbsp;&lt;/span&gt;. Segundo [Sacket(1979)](https://www.jameslindlibrary.org/wp-data/uploads/2014/06/Sackett-1979-whole-article.pdf) Ele acontece:
+
+#### • ao explorar o campo de estudo;
+#### • ao especificar e selecionar a amostra;
+#### • ao executar o experimento;
+#### • ao medir os resultados;
+#### • ao analisar os dados;
+#### • ao interpretar a análise;
+#### • ao publicar os resultados;
+    
+&lt;div class="my-footer"&gt;&lt;span&gt;alissamunerato@gmail.com    
+&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;
+&amp;emsp;&amp;emsp;&amp;emsp;12/09/2020&lt;/span&gt;&lt;/div&gt; 
+
+---
+
+# Exemplos de viés
+
+
+&lt;img src="devaiwomen_files/crime_prediction.png" width="466" style="display: block; margin: auto;" /&gt;
+
+&lt;div class="translation"&gt;&lt;span&gt;*O algoritmo K-means clustering foi utilizado para determinar os pontos de maior concentração de crime, e então 
+&lt;br&gt;foi feita uma regressão linear para prever os crimes nestes subgrupos de dados. (Tradução Livre)&lt;/span&gt;&lt;/div&gt;
+
+
+
+&lt;div class="my-footer"&gt;&lt;span&gt;alissamunerato@gmail.com    
+&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;
+&amp;emsp;&amp;emsp;&amp;emsp;12/09/2020&lt;/span&gt;&lt;/div&gt; 
+
+---
+
+# Exemplos de viés
+
+
+&lt;img src="devaiwomen_files/sex_differences.png" width="368" style="display: block; margin: auto;" /&gt;
+
+&lt;div class="translation"&gt;&lt;span&gt;Uma meta-análise reuniu 49 trabalhos para avaliar se as diferenças entre a anatomia do cérebro masculino e feminino são reais.
+&lt;br&gt;&lt;/span&gt;&lt;/div&gt;
+
+&lt;div class="my-footer"&gt;&lt;span&gt;alissamunerato@gmail.com    
+&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;
+&amp;emsp;&amp;emsp;&amp;emsp;12/09/2020&lt;/span&gt;&lt;/div&gt; 
+
+---
+
+Há diversos vieses cognitivos presentes em toda a ciência e é impossível escapar deles!
+
+Por outro lado, existem métodos que possibilitam a otimização do resultado.
+
+.pull-left[
+- Falseamento de Popper
+&lt;img src="https://specials-images.forbesimg.com/imageserve/5db05452a210800006f03c9a/960x0.jpg?fit=scale
+" width="70%" /&gt;
+
+]
+
+.pull-right[
+- Método Científico
+&lt;img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fb/Metodo_cientifico.svg/1024px-Metodo_cientifico.svg.png
+" width="100%" style="display: block; margin: auto auto auto 0;" /&gt;
+
+]
+
+&lt;div class="my-footer"&gt;&lt;span&gt;alissamunerato@gmail.com    
+&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;
+&amp;emsp;&amp;emsp;&amp;emsp;12/09/2020&lt;/span&gt;&lt;/div&gt; 
+
+---
+
+# Prática no mercado
+
+&lt;span class="emphasized"&gt;&amp;nbsp;Vamos usar um dataset disponibilizado anonimamente no Kaggle:&amp;nbsp;&lt;/span&gt;
+
+- [projeto kaggle]("https://www.kaggle.com/loveall/clicks-conversion-tracking")
+
+&lt;table class=" lightable-paper lightable-hover" style='font-size: 10px; font-family: "Arial Narrow", arial, helvetica, sans-serif; margin-left: auto; margin-right: auto;'&gt;
+ &lt;thead&gt;
+  &lt;tr&gt;
+   &lt;th style="text-align:right;"&gt; id_anuncio &lt;/th&gt;
+   &lt;th style="text-align:right;"&gt; id_campanha &lt;/th&gt;
+   &lt;th style="text-align:right;"&gt; id_campanha_fb &lt;/th&gt;
+   &lt;th style="text-align:left;"&gt; idade &lt;/th&gt;
+   &lt;th style="text-align:left;"&gt; genero &lt;/th&gt;
+   &lt;th style="text-align:right;"&gt; interesse &lt;/th&gt;
+   &lt;th style="text-align:right;"&gt; impressoes &lt;/th&gt;
+   &lt;th style="text-align:right;"&gt; cliques &lt;/th&gt;
+   &lt;th style="text-align:right;"&gt; custo &lt;/th&gt;
+   &lt;th style="text-align:right;"&gt; conversoes_totais &lt;/th&gt;
+   &lt;th style="text-align:right;"&gt; conversoes_aprovadas &lt;/th&gt;
+  &lt;/tr&gt;
+ &lt;/thead&gt;
+&lt;tbody&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:right;"&gt; 708746 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 916 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 103916 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 30-34 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; M &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 15 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 7350 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 1 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 1.43 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 2 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 1 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:right;"&gt; 708749 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 916 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 103917 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 30-34 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; M &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 16 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 17861 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 2 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 1.82 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 2 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:right;"&gt; 708771 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 916 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 103920 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 30-34 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; M &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 20 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 693 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.00 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 1 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:right;"&gt; 708815 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 916 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 103928 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 30-34 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; M &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 28 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 4259 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 1 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 1.25 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 1 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:right;"&gt; 708818 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 916 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 103928 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 30-34 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; M &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 28 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 4133 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 1 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 1.29 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 1 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 1 &lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;small&gt;
+
+.pull-left[
+- As * **campanhas** * são compostas por * **anúncios** * que são direcionados a usuários de específicas segmentações. Aqui estão representados * **faixa etária, gênero e interesse** *, o último sendo um código que representa interesses marcados pelo usuário no Facebook.
+]
+
+.pull-right[
+- As * **impressões**  * são quantas vezes um anúncio apareceu para o usuário, enquanto os * **cliques**  * medem o número de vezes em que ele foi clicado. As * **conversões totais**  * representam os engajamentos com o produto e as * **conversões aprovadas**  * contabilizam o número de compras.
+]
+
+
+
+&lt;/small&gt;
+
+&lt;div class="my-footer"&gt;&lt;span&gt;alissamunerato@gmail.com    
+&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;
+&amp;emsp;&amp;emsp;&amp;emsp;12/09/2020&lt;/span&gt;&lt;/div&gt; 
+
+---
+#### Wrangling &amp; Summary
+
+
+```r
+library(tidyverse)
+library(kableExtra)
+
+clustering &lt;- conversionTable %&gt;% 
+  select(impressoes:conversoes_aprovadas) %&gt;% 
+  mutate(across(is.numeric, ~ sqrt(.x))) %&gt;% 
+  mutate(cpi = custo/impressoes,
+         cpe = custo/conversoes_totais,
+         cpc = custo/conversoes_aprovadas) %&gt;% 
+  mutate(across(everything(), ~ ifelse(is.finite(.x), .x, 0)))
+
+summary(clustering) %&gt;% 
+  kbl() %&gt;%
+  kable_paper("hover", full_width = T, font_size = 10)
+```
+
+&lt;table class=" lightable-paper lightable-hover" style='font-size: 10px; font-family: "Arial Narrow", arial, helvetica, sans-serif; margin-left: auto; margin-right: auto;'&gt;
+ &lt;thead&gt;
+  &lt;tr&gt;
+   &lt;th style="text-align:left;"&gt;   &lt;/th&gt;
+   &lt;th style="text-align:left;"&gt;   impressoes &lt;/th&gt;
+   &lt;th style="text-align:left;"&gt;    cliques &lt;/th&gt;
+   &lt;th style="text-align:left;"&gt;     custo &lt;/th&gt;
+   &lt;th style="text-align:left;"&gt; conversoes_totais &lt;/th&gt;
+   &lt;th style="text-align:left;"&gt; conversoes_aprovadas &lt;/th&gt;
+   &lt;th style="text-align:left;"&gt;      cpi &lt;/th&gt;
+   &lt;th style="text-align:left;"&gt;      cpe &lt;/th&gt;
+   &lt;th style="text-align:left;"&gt;      cpc &lt;/th&gt;
+  &lt;/tr&gt;
+ &lt;/thead&gt;
+&lt;tbody&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt;  &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; Min.   :   9.327 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; Min.   : 0.000 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; Min.   : 0.000 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; Min.   :0.000 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; Min.   :0.0000 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; Min.   :0.00000 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; Min.   : 0.000 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; Min.   : 0.000 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt;  &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 1st Qu.:  80.644 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 1st Qu.: 1.000 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 1st Qu.: 1.217 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 1st Qu.:1.000 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 1st Qu.:0.0000 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 1st Qu.:0.01220 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 1st Qu.: 1.175 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 1st Qu.: 0.000 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt;  &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; Median : 226.956 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; Median : 2.828 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; Median : 3.517 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; Median :1.000 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; Median :1.0000 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; Median :0.01577 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; Median : 2.862 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; Median : 0.000 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt;  &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; Mean   : 317.562 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; Mean   : 4.126 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; Mean   : 5.104 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; Mean   :1.467 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; Mean   :0.6436 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; Mean   :0.01370 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; Mean   : 3.103 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; Mean   : 2.580 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt;  &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 3rd Qu.: 470.924 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 3rd Qu.: 6.124 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 3rd Qu.: 7.748 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 3rd Qu.:1.732 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 3rd Qu.:1.0000 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 3rd Qu.:0.01824 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 3rd Qu.: 4.608 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 3rd Qu.: 4.907 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt;  &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; Max.   :1746.998 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; Max.   :20.518 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; Max.   :25.297 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; Max.   :7.746 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; Max.   :4.5826 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; Max.   :0.03878 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; Max.   :18.248 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; Max.   :18.774 &lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+
+&lt;div class="my-footer"&gt;&lt;span&gt;alissamunerato@gmail.com    
+&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;
+&amp;emsp;&amp;emsp;&amp;emsp;12/09/2020&lt;/span&gt;&lt;/div&gt; 
+
+---
+
+### Já olhando a demografia
+
+&lt;img src="devaiwomen_files/figure-html/unnamed-chunk-10-1.png" style="display: block; margin: auto;" /&gt;
+
+&lt;img src="devaiwomen_files/figure-html/unnamed-chunk-11-1.png" style="display: block; margin: auto;" /&gt;
+
+&lt;div class="my-footer"&gt;&lt;span&gt;alissamunerato@gmail.com    
+&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;
+&amp;emsp;&amp;emsp;&amp;emsp;12/09/2020&lt;/span&gt;&lt;/div&gt; 
+
+---
+# Clusterizando
+### Silhouette Method
+
+
+```r
+library(factoextra)
+fviz_nbclust(x = clustering, 
+             FUNcluster = kmeans, 
+             method = 'silhouette' )
+```
+
+&lt;img src="devaiwomen_files/figure-html/unnamed-chunk-12-1.png" style="display: block; margin: auto;" /&gt;
+
+
+&lt;div class="my-footer"&gt;&lt;span&gt;alissamunerato@gmail.com    
+&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;
+&amp;emsp;&amp;emsp;&amp;emsp;12/09/2020&lt;/span&gt;&lt;/div&gt; 
+
+---
+
+
+```r
+library(cluster)
+ready &lt;- kmeans(clustering, 2)
+ready$centers  %&gt;% 
+  kbl() %&gt;%
+  kable_paper("hover", full_width = T, font_size = 10)
+```
+
+&lt;table class=" lightable-paper lightable-hover" style='font-size: 10px; font-family: "Arial Narrow", arial, helvetica, sans-serif; margin-left: auto; margin-right: auto;'&gt;
+ &lt;thead&gt;
+  &lt;tr&gt;
+   &lt;th style="text-align:right;"&gt; impressoes &lt;/th&gt;
+   &lt;th style="text-align:right;"&gt; cliques &lt;/th&gt;
+   &lt;th style="text-align:right;"&gt; custo &lt;/th&gt;
+   &lt;th style="text-align:right;"&gt; conversoes_totais &lt;/th&gt;
+   &lt;th style="text-align:right;"&gt; conversoes_aprovadas &lt;/th&gt;
+   &lt;th style="text-align:right;"&gt; cpi &lt;/th&gt;
+   &lt;th style="text-align:right;"&gt; cpe &lt;/th&gt;
+   &lt;th style="text-align:right;"&gt; cpc &lt;/th&gt;
+  &lt;/tr&gt;
+ &lt;/thead&gt;
+&lt;tbody&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:right;"&gt; 169.2132 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 2.121679 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 2.59499 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 1.132750 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.446136 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.0126779 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 2.202906 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 1.165493 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:right;"&gt; 726.9857 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 9.657193 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 12.02674 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 2.388357 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 1.188710 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.0165304 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 5.587222 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 6.483628 &lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+.pull-left[
+&lt;img src="devaiwomen_files/figure-html/unnamed-chunk-14-1.png" style="display: block; margin: auto;" /&gt;
+]
+
+.pull-right[
+- Qual é o melhor?
+
+- Como avaliar?
+]
+&lt;div class="my-footer"&gt;&lt;span&gt;alissamunerato@gmail.com    
+&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;
+&amp;emsp;&amp;emsp;&amp;emsp;12/09/2020&lt;/span&gt;&lt;/div&gt; 
+
+---
+
+## Regras de negócio
+
+
+&lt;img src="devaiwomen_files/figure-html/unnamed-chunk-15-1.png" style="display: block; margin: auto;" /&gt;&lt;img src="devaiwomen_files/figure-html/unnamed-chunk-15-2.png" style="display: block; margin: auto;" /&gt;
+
+
+
+
+&lt;div class="my-footer"&gt;&lt;span&gt;alissamunerato@gmail.com    
+&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;
+&amp;emsp;&amp;emsp;&amp;emsp;12/09/2020&lt;/span&gt;&lt;/div&gt; 
+
+---
+### Interesses sem gênero - Custo
+
+
+
+&lt;img src="devaiwomen_files/figure-html/unnamed-chunk-17-1.png" style="display: block; margin: auto;" /&gt;
+&lt;div class="my-footer"&gt;&lt;span&gt;alissamunerato@gmail.com    
+&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;
+&amp;emsp;&amp;emsp;&amp;emsp;12/09/2020&lt;/span&gt;&lt;/div&gt; 
+
+
+
+---
+### Com visão de gênero
+
+
+&lt;img src="devaiwomen_files/figure-html/unnamed-chunk-18-1.png" style="display: block; margin: auto;" /&gt;
+&lt;div class="my-footer"&gt;&lt;span&gt;alissamunerato@gmail.com    
+&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;
+&amp;emsp;&amp;emsp;&amp;emsp;12/09/2020&lt;/span&gt;&lt;/div&gt;
+---
+
+### Com visão de gênero - Custo
+
+&lt;img src="devaiwomen_files/figure-html/unnamed-chunk-19-1.png" style="display: block; margin: auto;" /&gt;
+&lt;div class="my-footer"&gt;&lt;span&gt;alissamunerato@gmail.com    
+&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;
+&amp;emsp;&amp;emsp;&amp;emsp;12/09/2020&lt;/span&gt;&lt;/div&gt;
+---
+
+### Com visão de idade - Custo
+
+&lt;img src="devaiwomen_files/figure-html/unnamed-chunk-20-1.png" style="display: block; margin: auto;" /&gt;
+&lt;div class="my-footer"&gt;&lt;span&gt;alissamunerato@gmail.com    
+&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;
+&amp;emsp;&amp;emsp;&amp;emsp;12/09/2020&lt;/span&gt;&lt;/div&gt;
+
+---
+
+.pull-left[
+### Conclusões SEM a clusterização:
+
+- Vou investir mais em homens de 30 - 34 anos
+
+&lt;img src="https://pyxis.nymag.com/v1/imgs/32d/c0a/489c3a3d800f38f06c89456e50566ab649-21-drake-bell-josh-peck.rsquare.w330.jpg" style="display: block; margin: auto auto auto 0;" /&gt;
+]
+
+.pull-right[
+### Conclusões COM a clusterização:
+
+- Vou investir mais em X, de X anos, com X interesses de X cluster
+&lt;img src="https://modernpsychologist.ca/wp-content/uploads/2012/03/iStock_000018372486XSmall.jpg" style="display: block; margin: auto auto auto 0;" /&gt;
+
+
+]
+
+&lt;div class="my-footer"&gt;&lt;span&gt;alissamunerato@gmail.com    
+&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;
+&amp;emsp;&amp;emsp;&amp;emsp;12/09/2020&lt;/span&gt;&lt;/div&gt;
+---
+
+## Como decidir?
+
+### Experimentos:
+- Testes AB
+- Testes de hipótese
+- Acompanhamento de clusters
+- *Falseamento*
+
+&lt;div class="my-footer"&gt;&lt;span&gt;alissamunerato@gmail.com    
+&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;
+&amp;emsp;&amp;emsp;&amp;emsp;12/09/2020&lt;/span&gt;&lt;/div&gt;
+---
+##&amp;emsp;&amp;emsp;&amp;emsp;Muito obrigada pela participação!
+.pull-left[
+
+
+&lt;img src="https://64.media.tumblr.com/f092cbba72f55f5837ea01e29de844b0/tumblr_nqu7gzpCei1sg4mvmo2_400.gif" style="display: block; margin: auto;" /&gt;
+]
+.pull-right[
+
+&lt;img src="https://iili.io/2KPcE7.gif" style="display: block; margin: auto;" /&gt;
+]
+
+
+
+
+
+&lt;div class="my-footer"&gt;&lt;span&gt;alissamunerato@gmail.com    
+&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;
+&amp;emsp;&amp;emsp;&amp;emsp;12/09/2020&lt;/span&gt;&lt;/div&gt;
+    </textarea>
+<style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script>var slideshow = remark.create();
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function(d) {
+  var s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})(document);
+
+(function(d) {
+  var el = d.getElementsByClassName("remark-slides-area");
+  if (!el) return;
+  var slide, slides = slideshow.getSlides(), els = el[0].children;
+  for (var i = 1; i < slides.length; i++) {
+    slide = slides[i];
+    if (slide.properties.continued === "true" || slide.properties.count === "false") {
+      els[i - 1].className += ' has-continuation';
+    }
+  }
+  var s = d.createElement("style");
+  s.type = "text/css"; s.innerHTML = "@media print { .has-continuation { display: none; } }";
+  d.head.appendChild(s);
+})(document);
+// delete the temporary CSS (for displaying all slides initially) when the user
+// starts to view slides
+(function() {
+  var deleted = false;
+  slideshow.on('beforeShowSlide', function(slide) {
+    if (deleted) return;
+    var sheets = document.styleSheets, node;
+    for (var i = 0; i < sheets.length; i++) {
+      node = sheets[i].ownerNode;
+      if (node.dataset["target"] !== "print-only") continue;
+      node.parentNode.removeChild(node);
+    }
+    deleted = true;
+  });
+})();
+(function() {
+  "use strict"
+  // Replace <script> tags in slides area to make them executable
+  var scripts = document.querySelectorAll(
+    '.remark-slides-area .remark-slide-container script'
+  );
+  if (!scripts.length) return;
+  for (var i = 0; i < scripts.length; i++) {
+    var s = document.createElement('script');
+    var code = document.createTextNode(scripts[i].textContent);
+    s.appendChild(code);
+    var scriptAttrs = scripts[i].attributes;
+    for (var j = 0; j < scriptAttrs.length; j++) {
+      s.setAttribute(scriptAttrs[j].name, scriptAttrs[j].value);
+    }
+    scripts[i].parentElement.replaceChild(s, scripts[i]);
+  }
+})();
+(function() {
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
+      links[i].target = '_blank';
+    }
+  }
+})();</script>
+
+<script>
+slideshow._releaseMath = function(el) {
+  var i, text, code, codes = el.getElementsByTagName('code');
+  for (i = 0; i < codes.length;) {
+    code = codes[i];
+    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+      text = code.textContent;
+      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
+          /^\$\$(.|\s)+\$\$$/.test(text) ||
+          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+        code.outerHTML = code.innerHTML;  // remove <code></code>
+        continue;
+      }
+    }
+    i++;
+  }
+};
+slideshow._releaseMath(document);
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>
